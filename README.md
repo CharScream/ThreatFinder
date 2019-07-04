@@ -1,2 +1,2 @@
 # TeamBreaker
-Finds flaw in Pokemon team based on Smogon analysis 
+Tells user if their ubers team has a glaring weakness according to smogon analysis
