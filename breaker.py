@@ -11,7 +11,7 @@ class EV(Enum):  # usage is EV.HP.value
 
 
 class Pokemon:
-    def __init__(self, name, set_name, item, ability, nature, move_tuple, ev_li):
+    def __init__(self, name, set_name, item, ability, nature, move_tuple, ev_li = []):
         self.name = name
         self.set_name = set_name
         self.item = item
@@ -60,11 +60,9 @@ class Pokemon:
 
     def get_evs(self):
         """
-
         :return: ev list
         """
         return self.ev_li
-
 
 
 def make_moveset(m1, m2, m3, m4):
@@ -94,7 +92,7 @@ def make_evs(hp=0, atk=0, de=0, spa=0, spd=0, spe=0):
     :return: list with ev values
     """
 
-    evs = [hp,atk,de,spa,spd,spe]
+    evs = [hp, atk, de, spa, spd, spe]
     return evs
 
 
