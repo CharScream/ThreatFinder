@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>TeamBreaker</title>
     <style>
-        h1 {color:#424045;}
-        p {color:black;}
+        h1 {color:white;}
+        p {color:white;}
         textarea {
         width: 40%;
         height: 425px;
@@ -18,19 +18,19 @@
         }
     </style>
 </head>
-<body>
+<body bgcolor = "#000000">
 <h1>
     Uber TeamBreaker
 </h1>
 <p>
-   Enter your team below in Pokemon Showdown format.
+        Enter your team below in Pokemon Showdown format.
 </p>
 
 <p1>
-    <form action="/action_page.php  ">
+    <form method="POST" action="/">
         <textarea></textarea>
         <br> <br/>
-      <input type="submit" value="Submit">
+      <input type="submit" name="team" value="Submit">
     </form>
 </p1>
 </body>
