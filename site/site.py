@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
-
+import breaker
+import teamparser
 app = Flask(__name__)
 
 
@@ -11,12 +12,20 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/send', methods=['GET', 'POST'])
-def send():
+@app.route('/result', methods=['GET', 'POST'])
+def result():
     if request.method == 'POST':
         team = request.form['team']
-        return render_template('result.html', team=team)
-    return render_template('Form.html')
+        # call python code here on team
+        input_team = request.form["team"]
+        print(input_team)
+        return render_template('result.html', team=input_team)
+    return render_template('index.html')
+
+
+@app.route('/hehe/<name>')
+def hehe(name):
+    return "sasjkfjksd" + name + '!'
 
 
 app.run('127.0.0.1', debug=True)
