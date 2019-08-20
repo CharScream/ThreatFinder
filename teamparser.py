@@ -1,10 +1,12 @@
+import re
 def parse(team):
-    pass
-
+    team_pat = re.compile(r"\b(.*)\s@\s(.*)\r\n.*:\s(.*)\r\n.*:\s(.*)\r\n(.*)\s[Nn].*\r\n")
+    a = team_pat.findall(team)
+    for i in a:
+        print(i)
 
 def main():
-    test = "Hey there this is test"
-    print(test)
+
     pass
 
 
