@@ -1,17 +1,23 @@
 import re
 
+
 def parse(team):
+    """
+    :param team: a Pokemon Showdown format team
+    :return: The parsed team
+    """
+    team = team + "\r\n"  # the format of input might not contain a newline
     complete_mon_list = []
     team_pat = re.compile(
         r"(.*)\s@\s(.*)\s?\r\n.*:\s(.*)\s?\r\n(?:Shiny:.*\s?\r\n)?.*:\s(.*)\s?\r\n(.*)\s[Nn].*\s?\r\n(?:IVs:\s.*\s?\r\n)?-\s(.*)\s?\r\n-\s(.*)\s?\r\n-\s(.*)\s?\r\n-\s(.*)\r\n?")
-    
-    mon_list = team_pat.findall(team)
 
-    print(type(mon_list))
+    mon_list = team_pat.findall(team)
 
     for mon in mon_list:
         temp_li = list(mon)
         temp_li = [field.rstrip() for field in temp_li]
+        mon_name = temp_li[0].split()
+        temp_li[0] = mon_name[0]
         complete_mon_list.append(tuple(temp_li))
 
     for mon in complete_mon_list:
