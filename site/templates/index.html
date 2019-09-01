@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <title>TeamBreaker</title>
     <style>
-        h1 {color:white;}
-        p {color:white;}
+        h1 {
+            color:white;
+        }
+        p {
+            color:white;
+        }
         textarea {
-        width: 40%;
-        height: 425px;
-        padding: 12px 20px;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
-        border-radius: 4px;
-        background-color: #f8f8f8;
-        resize: none;
+            width: 40%;
+            height: 425px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            resize: none;
         }
     </style>
 </head>
@@ -23,14 +27,14 @@
     Uber TeamBreaker
 </h1>
 <p>
-        Enter your team below in Pokemon Showdown format.
+        Finds a Pokemon that your team can't check.
 </p>
 
 <p1>
     <form method="POST" action="/result">
-        <textarea name="team"></textarea>
+        <textarea name="team" placeholder = "Paste your team here in Pokemon Showdown format."></textarea>
         <br><br/>
-      <input type="submit" value="Submit">
+      <input type="submit" value="Break my team!">
     </form>
 </p1>
 </body>

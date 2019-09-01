@@ -18,7 +18,7 @@ def result():
         team = request.form['team']
         # call python code here on team
         input_team = request.form["team"]
-        print(input_team)
+        teamparser.parse(input_team)
         return render_template('result.html', team=input_team)
     return render_template('index.html')
 
