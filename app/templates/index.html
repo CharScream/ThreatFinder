@@ -2,40 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
     <title>TeamBreaker</title>
-    <style>
-        h1 {
-            color:white;
-        }
-        p {
-            color:white;
-        }
-        textarea {
-            width: 40%;
-            height: 425px;
-            padding: 12px 20px;
-            box-sizing: border-box;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-            background-color: #f8f8f8;
-            resize: none;
-        }
-    </style>
 </head>
-<body bgcolor = "#000000">
-<h1>
-    Uber TeamBreaker
-</h1>
-<p>
-        Finds a Pokemon that your team can't check.
-</p>
 
-<p1>
-    <form method="POST" action="/result">
-        <textarea name="team" placeholder = "Paste your team here in Pokemon Showdown format."></textarea>
-        <br><br/>
-      <input type="submit" value="Break my team!">
-    </form>
-</p1>
+<body>
+    <h1>
+        Uber TeamBreaker
+    </h1>
+    <p>
+        Finds Pokemon that your team can't check.
+    </p>
+
+    <p1>
+        <form method="POST" action="/result">
+            <textarea name="team" placeholder = "Paste your team here in Pokemon Showdown format."></textarea>
+            <br><br/>
+          <input type="submit" value="Break my team!">
+        </form>
+    </p1>
 </body>
+
 </html>
