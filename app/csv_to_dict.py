@@ -1,17 +1,10 @@
 import csv
 
-# string = "Apple,Red,Green,Round,Fruit,,"
-
-# li = string.split(",")
-# for i in li:
-#   print(i)
-# print(li)
-
-# li = list(filter(None, li))
-
-# print(li)
-
 def build_dict(file_name:str) -> dict:
+	"""
+	:param file_name: name of file to be read
+    :return: dictionary of tuples, where the key is the pokemon and the value is a tuple of counters
+	"""
 	di = {}
 	with open(file_name, newline="") as csvfile:
 		reader = csv.reader(csvfile, delimiter= ",", quotechar="|")
@@ -22,8 +15,8 @@ def build_dict(file_name:str) -> dict:
 	return di
 
 def main():
-	print("hey")
-	build_dict("monChecklist.csv")
+	a = build_dict("monChecklist.csv")
+	print(a)
 
 if __name__ == "__main__":
 	main()

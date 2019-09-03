@@ -1,7 +1,7 @@
 import re
 
 
-def parse(team):
+def parse(team:str) -> list:
     """
     :param team: a Pokemon Showdown format team
     :return: The parsed team
@@ -16,14 +16,19 @@ def parse(team):
     for mon in mon_list:
         temp_li = list(mon)
         temp_li = [field.rstrip() for field in temp_li]
-        mon_name = temp_li[0].split()
-        temp_li[0] = mon_name[0]
+        # mon_name = temp_li[0].split()
+        # temp_li[0] = mon_name[0]
+        
         complete_mon_list.append(tuple(temp_li))
+        team_li = []
 
-    for mon in complete_mon_list:
-        print(mon)
+        #since we only need to use the mons for now
+        #v2 might require moves
+        for mon in complete_mon_list:
+            team_li.append(mon[0])
+        team_li = [x.lower() for x in team_li]
 
-    return complete_mon_list
+    return team_li
 
 
 def main():

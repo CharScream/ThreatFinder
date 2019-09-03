@@ -1,5 +1,5 @@
 from flask import render_template,request #Flask,  
-from app import app, breaker, teamparser
+from app import app, breaker, teamparser, csv_to_dict
 # import breaker
 # import teamparser
 
@@ -19,6 +19,10 @@ def result():
         # call python code here on team
         input_team = request.form["team"]
         input_team = teamparser.parse(input_team)
+        print(input_team)
+        breaker.smash(input_team)
+
+
         return render_template('result.html', team=input_team)
     return render_template('index.html')
 
