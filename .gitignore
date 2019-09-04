@@ -36,3 +36,4 @@ bh_unicode_properties.cache
 GitHub.sublime-settings
 
 venv/
+__pycache__/
