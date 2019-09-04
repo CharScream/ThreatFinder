@@ -1,1 +1,1 @@
-web: flask translate compile; gunicorn TeamBreaker:app
+web: flask translate compile; gunicorn ThreatFinder:app
