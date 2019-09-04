@@ -16,6 +16,8 @@ def build_dict(file_name:str) -> dict:
         for row in reader:
             row_li = list(filter(None,row))
             di[row_li[0]] = tuple(row_li[1:])
+
+
     
     return di
 
@@ -49,7 +51,9 @@ def smash(team:list) -> list:
 
 
 def main():
-    pass
+    temp_di = build_dict("static/monCheckList.csv")
+    for keys,values in temp_di.items():
+        print(keys)
 
 if __name__ == "__main__":
     main()
