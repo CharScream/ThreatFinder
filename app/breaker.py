@@ -25,42 +25,21 @@ def smash(team:list) -> list:
     :return: list of pokemon that are threats to our team
     """
     mon_di = build_dict("app/static/monCheckList.csv")
-    team_set = set(team)
-    threats = {}
     result = []
+    threats = [] #make this a set after
+    to_remove = []
     for mon in team:
-        temp_li = team[:]
-        temp_li.remove(mon)
-        new_set = set(temp_li)
-        new_li = list(set(temp_li))
+        threats += list(mon_di[mon])
+    threats = list(set(threats))
 
-        # for pkmn in mon_di[mon]:
-        #     for poke in mon_di[pkmn]:
-        #         if poke in new_set:
-        #             if pkmn not in threats:
-        #                 threats[pkmn] = 1
-        #             else:
-        #                 threats[pkmn] += 1
-
-        # for pkmn in mon_di[mon]:
-        #     if new_set not in set(mon_di[pkmn]):
-        #         if pkmn not in threats:
-        #             threats[pkmn] = 1
-        #         else:
-        #             threats[pkmn] += 1
-
-        for pkmn in mon_di[mon]:
-            if not any(m in pkmn for m in new_li):
-                if pkmn not in threats:
-                    threats[pkmn] = 1
-                else:
-                    threats[pkmn] += 1
+    for threat in threats:
+        if len(set(team) & set(mon_di[threat])):
+            to_remove.append(threat)
+    for mon in to_remove:
+        threats.remove(mon)
+    print(threats)
 
 
-
-        
-    for k,v in threats.items():
-        print(k,v)
 
 
     return result

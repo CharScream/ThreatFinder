@@ -19,7 +19,6 @@ def result():
         # call python code here on team
         input_team = request.form["team"]
         input_team = teamparser.parse(input_team)
-        print(input_team)
         breaker.smash(input_team)
 
 
