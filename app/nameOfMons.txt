@@ -18,34 +18,29 @@ arceus-rock
 arceus-steel
 arceus-water
 blaziken
-blaziken-mega
 darkrai
 deoxys
 deoxys-attack
-deoxys-d
-deoxys-s
+deoxys-defence
+deoxys-speed
 dialga
 genesect
 gengar
-gengar-mega
 giratina
 giratina-origin
 groudon
 groudon-primal
 ho-oh
-mega kangaskhan
+kangaskhan
 kyogre
 kyogre-primal
 kyurem-white
 landorus
-lucario-mega
 lugia
 lunala
 marshadow
-metagross-mega
+metagross
 mewtwo
-mewtwo-mega-x
-mewtwo-mega-y
 naganadel
 necrozma-dawn wings
 ultra necrozma
@@ -55,7 +50,6 @@ pheromosa
 rayquaza
 reshiram
 salamence
-salamence-mega
 shaymin-sky
 solgaleo
 xerneas
@@ -68,31 +62,28 @@ buzzwole
 celesteela
 chansey
 cloyster
-diancie-mega
+diancie
 ditto
 dugtrio
 excadrill
 ferrothorn
 gothitelle
 gothorita
-gyarados-mega
+gyarados
 klefki
 latias
-latias-mega
-lopunny-mega
+lopunny
 magearna
 muk-alola
 ribombee
-sableye-mega
-scizor-mega
+sableye
+scizor
 skarmory
-slowbro-mega
 slowbro
 smeargle
 tapu koko
 tapu lele
 toxapex
 tyranitar
-tyranitar-mega
-venusaur-mega
+venusaur
 wobbuffet

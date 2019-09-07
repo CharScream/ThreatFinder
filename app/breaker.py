@@ -53,7 +53,8 @@ def smash(team:list) -> list:
 def main():
     temp_di = build_dict("static/monCheckList.csv")
     for keys,values in temp_di.items():
-        print(keys)
+    	if("mega" not in keys):
+        	print(keys)
 
 if __name__ == "__main__":
     main()
