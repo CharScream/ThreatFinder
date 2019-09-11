@@ -17,8 +17,6 @@ def build_dict(file_name:str) -> dict:
             row_li = list(filter(None,row))
             di[row_li[0]] = tuple(row_li[1:])
 
-
-    
     return di
 
 def smash(team:list) -> list:
