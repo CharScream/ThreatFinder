@@ -28,9 +28,16 @@ def smash(team:list) -> list:
     result = []
     threats = [] #make this a set after
     to_remove = []
+    debugging_counter = 0
     for mon in team:
-        threats += list(mon_di[mon])
-    threats = list(set(threats))
+        try:
+            threats += list(mon_di[mon])
+        except:
+            debugging_counter += 1
+            print(debugging_counter)
+            print(mon)
+
+        threats = list(set(threats))
 
     for threat in threats:
         if len(set(team) & set(mon_di[threat])):
@@ -38,8 +45,8 @@ def smash(team:list) -> list:
     for mon in to_remove:
         threats.remove(mon)
     print(threats)
-
-
+    result =list(set(threats))
+    print(result)
 
 
     return result
