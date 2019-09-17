@@ -19,16 +19,16 @@ def result():
         # call python code here on team
         input_team = request.form["team"]
         input_team = teamparser.parse(input_team)
-        breaker.smash(input_team)
+        threats = breaker.smash(input_team)
 
 
-        return render_template('result.html', team=input_team)
+        return render_template('result.html', team=input_team, threats=threats)
     return render_template('index.html')
 
 
-@app.route('/hehe/<name>')
-def hehe(name):
-    return "sasjkfjksd" + name + '!'
+# @app.route('/hehe/<name>')
+# def hehe(name):
+#     return "sasjkfjksd" + name + '!'
 
 
 # app.run('127.0.0.1', debug=True)
