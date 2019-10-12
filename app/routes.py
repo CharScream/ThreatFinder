@@ -1,34 +1,27 @@
-from flask import render_template,request #Flask,  
+from flask import render_template,request
 from app import app, breaker, teamparser
-# import breaker
-# import teamparser
 
+RESULT_PAGE = 'result.html'
+INDEX_PAGE = 'index.html'
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    if request.method == 'POST':
-        team = request.form['team']
-        return render_template('result.html', team=team)
-    return render_template('index.html')
+    if request.method != 'POST':
+        return render_template(INDEX_PAGE)
 
+    team = request.form['team']
+    return render_template(RESULT_PAGE, team=team)
 
 @app.route('/result', methods=['GET', 'POST'])
 def result():
-    if request.method == 'POST':
-        team = request.form['team']
-        # call python code here on team
-        input_team = request.form["team"]
-        input_team = teamparser.parse(input_team)
-        threats = breaker.smash(input_team)
+    if request.method != 'POST':
+        return render_template(INDEX_PAGE)
 
-
-        return render_template('result.html', team=input_team, threats=threats)
-    return render_template('index.html')
-
-
-# @app.route('/hehe/<name>')
-# def hehe(name):
-#     return "sasjkfjksd" + name + '!'
+    team = request.form['team']
+    input_team = request.form["team"]
+    input_team = teamparser.parse(input_team)
+    threats = breaker.smash(input_team)
+    return render_template(RESULT_PAGE, team=input_team, threats=threats)
 
 
 # app.run('127.0.0.1', debug=True)
