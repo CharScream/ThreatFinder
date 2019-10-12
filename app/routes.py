@@ -14,6 +14,7 @@ def index():
 
 @app.route('/result', methods=['GET', 'POST'])
 def result():
+
     if request.method != 'POST':
         return render_template('index.html')
     assert(request.method != 'GET')
@@ -23,6 +24,5 @@ def result():
     breaker.smash(input_team)
 
     return render_template('result.html', team=input_team)
-
 
 # app.run('127.0.0.1', debug=True)
