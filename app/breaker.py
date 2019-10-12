@@ -1,4 +1,5 @@
 import csv
+mon_di = build_dict("app/static/monCheckList.csv")
 
 """
 two ideas for implementation
@@ -24,7 +25,7 @@ def smash(team:list) -> list:
     :param team: list of our pokemon team
     :return: list of pokemon that are threats to our team
     """
-    mon_di = build_dict("app/static/monCheckList.csv")
+    //mon_di = build_dict("app/static/monCheckList.csv")
     result = []
     threats = [] #make this a set after
     to_remove = []
