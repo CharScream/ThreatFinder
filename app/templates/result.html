@@ -2,12 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Results</title>
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <title>ThreatFinder</title>
 </head>
+
 <body>
-    <h1>
-    	{{ threats }}
-    </h1>
+    <div class="main-container">
+        <div class="input-box">
+            <div class="header">
+                <h1>
+                    Uber ThreatFinder
+                </h1>
+                <p>
+                    Finds Pokemon that your team can't check.
+                </p>
+            </div>
+
+            <p1>
+                <form method="POST" action="/result">
+                    <textarea name="team" placeholder = "Paste your team here in Pokemon Showdown format."></textarea>
+                    <br><br/>
+                  <input type="submit" value="Check for Threats!">
+                </form>
+            </p1>
+        </div>
+
+        <div class="threats">
+            <p>
+<!--                Input team: {{ team }}-->
+                <br>
+<!--                Threats: {{ threats }}-->
+                {% if threats %}
+                    Threats:
+                    {% for threat in threats%}
+                        <a href="https://www.smogon.com/dex/sm/pokemon/{{ threat }}/uber/">
+                            <img src="static/ubers/{{ threat }}.gif" alt="{{ threat }}">
+                        </a>
+
+                    {% endfor %}
+                {% else %}
+                    No threats were found!
+                {% endif %}
+
+            </p>
+        </div>
+    </div>
+
+
 </body>
+
 </html>

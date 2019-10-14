@@ -7,20 +7,34 @@
 </head>
 
 <body>
-    <h1>
-        Uber ThreatFinder
-    </h1>
-    <p>
-        Finds Pokemon that your team can't check.
-    </p>
+    <div class="main-container">
+        <div class="input-box">
+            <div class="header">
+                <h1>
+                    Uber ThreatFinder
+                </h1>
+                <p>
+                    Finds Pokemon that your team can't check.
+                </p>
+            </div>
 
-    <p1>
-        <form method="POST" action="/result">
-            <textarea name="team" placeholder = "Paste your team here in Pokemon Showdown format."></textarea>
-            <br><br/>
-          <input type="submit" value="Break my team!">
-        </form>
-    </p1>
+            <p1>
+                <form method="POST" action="/result">
+                    <textarea name="team" placeholder = "Paste your team here in Pokemon Showdown format."></textarea>
+                    <br><br/>
+                  <input type="submit" value="Check for Threats!">
+                </form>
+            </p1>
+        </div>
+                <div class="threats">
+            <p>
+                {{ team }}
+            </p>
+        </div>
+
+    </div>
+
+
 </body>
 
 </html>

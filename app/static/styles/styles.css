@@ -1,12 +1,27 @@
-h1 {
+.main-container {
+    display: flex;
+    align-items: flex-center;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.input-box {
+    order: 1;
+    flex-basis: 40%;
+}
+
+.threats {
+    color: white;
+    order: 2;
+    flex-basis: 40%;
+}
+
+.header {
     color: white;
 }
 
-p{
-    color: white;    
-}
 
-textarea {
+/*textarea {
     width: 40%;
     height: 425px;
     padding: 12px 20px;
@@ -15,8 +30,9 @@ textarea {
     border-radius: 4px;
     background-color: #f8f8f8;
     resize: none;
-}
+}*/
 
 body {
     background: black;
 }
+
