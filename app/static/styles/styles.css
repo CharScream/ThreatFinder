@@ -6,14 +6,20 @@
     flex-wrap: wrap;
 }
 .input-box {
+    width: 50%;
+    text-align: center;
     order: 1;
     flex-basis: 40%;
+
 }
 
 .threats {
+    text-align: left;
+    width: 50%;
     color: white;
     order: 2;
     flex-basis: 40%;
+    flex: 6;
 }
 
 .header {
@@ -21,8 +27,8 @@
 }
 
 
-/*textarea {
-    width: 40%;
+textarea {
+    width: 250px;
     height: 425px;
     padding: 12px 20px;
     box-sizing: border-box;
@@ -30,7 +36,7 @@
     border-radius: 4px;
     background-color: #f8f8f8;
     resize: none;
-}*/
+}
 
 body {
     background: black;
