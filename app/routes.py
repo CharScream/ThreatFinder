@@ -30,4 +30,4 @@ def result():
     return render_template(RESULT_PAGE, team=input_team, threats=threats)
 
 
-app.run('127.0.0.1', debug=True)
+# app.run('127.0.0.1', debug=True)
